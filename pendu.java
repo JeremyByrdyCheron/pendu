@@ -1,8 +1,12 @@
+
 import java.util.Random;
 import java.util.Scanner;
 
 class pendu {
-    public static String[] possibleWords = { "java", "python", "javascript", "gnome" };
+    public static String[] possibleWords = {
+            // "java", "python", "javascript", "gnome"
+            "test"
+    };
 
     public static Scanner scan = new Scanner(System.in);
 
@@ -25,6 +29,7 @@ class pendu {
             numberOfTry = propose(hiddenWord, letters, numberOfTry);
             fullyUncovered = wordFund(hiddenWord);
             if (fullyUncovered) {
+                numberOfTry++;
                 System.out.println("Vous avez gagné en " + numberOfTry + " coups");
                 rematch(numberOfTry, fullyUncovered);
             }
